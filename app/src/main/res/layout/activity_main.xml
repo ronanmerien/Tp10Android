@@ -210,6 +210,15 @@
             android:onClick="numberIn9" />
 
         <Button
+            android:id="@+id/button0"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="0"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:onClick="numberIn0" />
+
+        <Button
             android:id="@+id/buttonPlus"
             android:layout_width="70dp"
             android:layout_height="70dp"
@@ -243,7 +252,7 @@
             android:text="clear"
             android:layout_row="1"
             android:layout_column="5"
-            android:onClick="" />
+            android:onClick="inClear" />
 
         <Button
             android:id="@+id/buttoPop"
@@ -252,7 +261,7 @@
             android:text="pop"
             android:layout_row="2"
             android:layout_column="5"
-            android:onClick="" />
+            android:onClick="inPop" />
 
         <Button
             android:id="@+id/buttonSwap"
@@ -261,7 +270,7 @@
             android:text="swap"
             android:layout_row="3"
             android:layout_column="5"
-            android:onClick="" />
+            android:onClick="inSwap" />
 
         <Button
             android:id="@+id/buttonExe"

@@ -3,17 +3,15 @@ package com.example.admin.tp10android;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 public class Main extends AppCompatActivity {
 
     protected int newNumber;
     protected boolean pressButton;
-    protected boolean operationbutton;
     protected String operator;
     protected String addNewNumber = "";
-    protected String[] saveNumber = {"", "", ""};
+    protected String[] saveNumber = {"", "", "", ""};
     protected int pileSituation = 1;
     protected int result;
     TextView pile1;
@@ -80,19 +78,90 @@ public class Main extends AppCompatActivity {
         screenNumber();
     }
 
+    public void numberIn0 (View view) {
+        newNumber = 0;
+        screenNumber();
+    }
+
     public void inPlus (View view) {
         operator = "plus";
-        operatorManager();
+        numberCheck();
     }
 
     public void inMoins (View view) {
         operator = "moins";
-        operatorManager();
+        numberCheck();
     }
 
     public void inTimes (View view) {
         operator = "times";
-        operatorManager();
+        numberCheck();
+    }
+
+    public void inClear (View view) {
+        pile1.setText("");
+        pile2.setText("");
+        pile3.setText("");
+        pile4.setText("");
+        resultView.setText("");
+        for (int i = 0; i < 3; i++) {
+            saveNumber[i] = "";
+        }
+        result = 0;
+        pileSituation = 1;
+        addNewNumber = "";
+        pressButton = false;
+    }
+
+    public void inPop (View view) {
+        switch (pileSituation) {
+            case 1:
+                break;
+            case 2:
+                pile1.setText(String.valueOf(saveNumber[1]));
+                pile2.setText("");
+                String numberS1 = saveNumber[1];
+                saveNumber[1] = "";
+                saveNumber[0] = numberS1;
+                pileSituation -= 1;
+                break;
+            case 3:
+                pile1.setText(String.valueOf(saveNumber[1]));
+                pile2.setText(String.valueOf(saveNumber[2]));
+                pile3.setText("");
+                numberS1 = saveNumber[1];
+                String numberS2 = saveNumber[2];
+                saveNumber[2] = "";
+                saveNumber[1] = numberS2;
+                saveNumber[0] = numberS1;
+                pileSituation -= 1;
+                break;
+            case 4:
+                pile1.setText(String.valueOf(saveNumber[1]));
+                pile2.setText(String.valueOf(saveNumber[2]));
+                pile3.setText(String.valueOf(saveNumber[3]));
+                pile4.setText("");
+                numberS1 = saveNumber[1];
+                numberS2 = saveNumber[2];
+                String numberS3 = saveNumber[3];
+                saveNumber[3] = "";
+                saveNumber[2] = numberS3;
+                saveNumber[1] = numberS2;
+                saveNumber[0] = numberS1;
+                pileSituation -= 1;
+                break;
+        }
+    }
+
+    public void inSwap (View view) {
+        if (saveNumber[1] != "") {
+            pile1.setText(String.valueOf(saveNumber[1]));
+            pile2.setText(String.valueOf(saveNumber[0]));
+            String numberS0 = saveNumber[0];
+            String numberS1 = saveNumber[1];
+            saveNumber[1] = numberS0;
+            saveNumber[0] = numberS1;
+        }
     }
 
     public void inExe (View view) {
@@ -114,6 +183,13 @@ public class Main extends AppCompatActivity {
             pressButton = false;
             addNewNumber = "";
             resultView.setText("");
+        }
+    }
+
+    //vérifie qu'il y a au moins deux nombres dans la pile
+    public void numberCheck() {
+        if (saveNumber[1] != "") {
+            operatorManager();
         }
     }
 
@@ -146,11 +222,37 @@ public class Main extends AppCompatActivity {
                 pile2.setText(String.valueOf(saveNumber[0]));
                 pile3.setText(String.valueOf(saveNumber[1]));
                 pile4.setText(String.valueOf(saveNumber[2]));
+                saveNumber[3] = saveNumber[2];
                 saveNumber[2] = saveNumber[1];
                 saveNumber[1] = saveNumber[0];
                 saveNumber[0] = String.valueOf(newNumber);
                 break;
         }
+        //To do suppression des nombre utilisés
+        /*switch (pileSituation) {
+            case 2:
+                pile1.setText(String.valueOf(newNumber));
+                pile2.setText("");
+                saveNumber[0] = String.valueOf(newNumber);
+                pileSituation -= 1;
+                break;
+            case 3:
+                pile1.setText(String.valueOf(newNumber));
+                pile2.setText(String.valueOf(saveNumber[1]));
+                saveNumber[1] = saveNumber[2];
+                saveNumber[0] = String.valueOf(newNumber);
+                pileSituation -= 1;
+                break;
+            case 4:
+                pile1.setText(String.valueOf(newNumber));
+                pile2.setText(String.valueOf(saveNumber[1]));
+                pile3.setText(String.valueOf(saveNumber[2]));
+                saveNumber[2] = "";
+                saveNumber[1] = saveNumber[2];
+                saveNumber[0] = String.valueOf(newNumber);
+                pileSituation -= 1;
+                break;
+        }*/
     }
 
     //on crée une méthode de gestion des opérateur et du résultat
@@ -159,22 +261,16 @@ public class Main extends AppCompatActivity {
         switch (operator) {
             case "plus":
                 result = Integer.parseInt(saveNumber[0]) + Integer.parseInt(saveNumber[1]);
-                addNewNumber = "";
-                newNumber = result;
-                resultView.setText(String.valueOf(result));
                 break;
             case "moins":
                 result = Integer.parseInt(saveNumber[1]) - Integer.parseInt(saveNumber[0]);
-                addNewNumber = "";
-                newNumber = result;
-                resultView.setText(String.valueOf(result));
                 break;
             case "times":
                 result = Integer.parseInt(saveNumber[0]) * Integer.parseInt(saveNumber[1]);
-                addNewNumber = "";
-                newNumber = result;
-                resultView.setText(String.valueOf(result));
                 break;
         }
+        addNewNumber = "";
+        newNumber = result;
+        resultView.setText(String.valueOf(result));
     }
 }
