@@ -87,7 +87,7 @@
             android:textSize="15dp" />
 
         <TextView
-            android:id="@+id/pile"
+            android:id="@+id/pile1"
             android:layout_width="325dp"
             android:layout_height="30dp"
             android:layout_gravity="left"
@@ -210,7 +210,7 @@
             android:onClick="numberIn9" />
 
         <Button
-            android:id="@+id/buttonplus"
+            android:id="@+id/buttonPlus"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:text="+"
@@ -219,7 +219,7 @@
             android:onClick="inPlus" />
 
         <Button
-            android:id="@+id/buttonmoins"
+            android:id="@+id/buttonMoins"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:text="-"
@@ -228,7 +228,7 @@
             android:onClick="" />
 
         <Button
-            android:id="@+id/buttontimes"
+            android:id="@+id/buttonTimes"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:text="*"
@@ -237,7 +237,7 @@
             android:onClick="" />
 
         <Button
-            android:id="@+id/buttonclear"
+            android:id="@+id/buttonClear"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:text="clear"
@@ -246,7 +246,7 @@
             android:onClick="" />
 
         <Button
-            android:id="@+id/buttopop"
+            android:id="@+id/buttoPop"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:text="pop"
@@ -255,7 +255,7 @@
             android:onClick="" />
 
         <Button
-            android:id="@+id/buttonswap"
+            android:id="@+id/buttonSwap"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:text="swap"
@@ -264,13 +264,13 @@
             android:onClick="" />
 
         <Button
-            android:id="@+id/buttonexe"
+            android:id="@+id/buttonExe"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:text="exe"
             android:layout_row="4"
             android:layout_column="5"
-            android:onClick="" />
+            android:onClick="inExe" />
 
     </GridLayout>
 
