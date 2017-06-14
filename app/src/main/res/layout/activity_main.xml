@@ -8,279 +8,317 @@
     android:layout_alignLeft="@+id/textView"
     android:useDefaultMargins="false"
     android:alignmentMode="alignBounds"
-    android:columnCount="1"
-    android:rowCount="3">
+    android:background="@color/background"
+    >
 
-    <GridLayout
-        android:background="@color/pileAccent"
-        android:layout_width="match_parent"
-        android:layout_height="120dp">
+        <GridLayout android:layout_row="0" android:layout_column="0"
+            android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/pile1"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textAlignment="center"
+                    android:textSize="15dp"
+                    android:layout_column="0"
+                    android:layout_row="0"/>
 
-        <TextView
-            android:id="@+id/graphpile4"
-            android:layout_width="60dp"
-            android:layout_height="30dp"
-            android:layout_gravity="left"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:text="|"
-            android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/pile2"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textAlignment="center"
+                    android:textSize="15dp"
+                    android:layout_column="0"
+                    android:layout_row="1" />
 
-        <TextView
-            android:id="@+id/graphpile3"
-            android:layout_width="60dp"
-            android:layout_height="30dp"
-            android:layout_gravity="left"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:text="|"
-            android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/pile3"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textAlignment="center"
+                    android:textSize="15dp"
+                    android:layout_column="0"
+                    android:layout_row="2" />
 
-        <TextView
-            android:id="@+id/graphpile2"
-            android:layout_width="60dp"
-            android:layout_height="30dp"
-            android:layout_gravity="left"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:text="|"
-            android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/pile4"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textAlignment="center"
+                    android:textSize="15dp"
+                    android:layout_column="0"
+                    android:layout_row="3" />
 
-        <TextView
-            android:id="@+id/graphpile"
-            android:layout_width="60dp"
-            android:layout_height="30dp"
-            android:layout_gravity="left"
-            android:layout_row="3"
-            android:layout_column="0"
-            android:text="|"
-            android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
 
-        <TextView
-            android:id="@+id/pile4"
-            android:layout_width="325dp"
-            android:layout_height="30dp"
-            android:layout_gravity="left"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:text="|"
-            android:textSize="15dp" />
+                    android:layout_above="@+id/button2"
 
-        <TextView
-            android:id="@+id/pile3"
-            android:layout_width="325dp"
-            android:layout_height="30dp"
-            android:layout_gravity="left"
-            android:layout_row="1"
-            android:layout_column="1"
-            android:text="|"
-            android:textSize="15dp" />
+                    android:layout_centerHorizontal="true"
+                    android:layout_column="0"
+                    android:layout_row="4"
 
-        <TextView
-            android:id="@+id/pile2"
-            android:layout_width="325dp"
-            android:layout_height="30dp"
-            android:layout_gravity="left"
-            android:layout_row="2"
-            android:layout_column="1"
-            android:text="|"
-            android:textSize="15dp" />
+                    android:background="@color/grey"
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+        </GridLayout>
 
-        <TextView
-            android:id="@+id/pile1"
-            android:layout_width="325dp"
-            android:layout_height="30dp"
-            android:layout_gravity="left"
-            android:layout_row="3"
-            android:layout_column="1"
-            android:text="|"
-            android:textSize="15dp" />
+        <GridLayout android:layout_row="1" android:layout_column="0">
+                <Button
+                    android:id="@+id/button0"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignLeft="@+id/button8"
+                    android:layout_below="@+id/button8"
 
-    </GridLayout>
+                    android:layout_column="1"
 
-    <GridLayout
-        android:background="@color/resultAccent"
-        android:layout_width="match_parent"
-        android:layout_height="80dp">
+                    android:layout_marginTop="10dp"
+                    android:layout_row="5"
+                    android:background="@drawable/layout"
+                    android:onClick="numberIn0"
+                    android:text="0" />
 
-        <TextView
-            android:id="@+id/graphresult"
-            android:layout_width="60dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="left"
-            android:layout_column="0"
-            android:text="|"
-            android:textSize="15dp" />
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@+id/button7"
+                    android:layout_column="1"
 
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="325dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="left"
-            android:layout_column="1"
-            android:text="|"
-            android:textSize="15dp" />
+                    android:layout_marginLeft="10dp"
 
-    </GridLayout>
+                    android:layout_row="4"
+                    android:layout_toRightOf="@+id/button7"
+                    android:background="@drawable/layout"
+                    android:onClick="numberIn8"
+                    android:text="8" />
 
-    <GridLayout
-        android:background="@color/padAccent"
-        android:layout_width="match_parent"
-        android:layout_height="300dp">
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignLeft="@+id/button4"
+                    android:layout_below="@+id/button4"
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="1"
-            android:layout_row="1"
-            android:layout_column="1"
-            android:onClick="numberIn1" />
+                    android:layout_column="0"
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="2"
-            android:layout_row="1"
-            android:layout_column="2"
-            android:onClick="numberIn2" />
+                    android:layout_marginTop="10dp"
+                    android:layout_row="4"
+                    android:background="@drawable/layout"
+                    android:onClick="numberIn7"
+                    android:text="7" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="3"
-            android:layout_row="1"
-            android:layout_column="3"
-            android:onClick="numberIn3" />
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@+id/button8"
+                    android:layout_column="2"
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="4"
-            android:layout_row="2"
-            android:layout_column="1"
-            android:onClick="numberIn4" />
+                    android:layout_marginLeft="10dp"
 
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="5"
-            android:layout_row="2"
-            android:layout_column="2"
-            android:onClick="numberIn5" />
+                    android:layout_row="4"
+                    android:layout_toRightOf="@+id/button8"
+                    android:background="@drawable/layout"
+                    android:onClick="numberIn9"
+                    android:text="9" />
 
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="6"
-            android:layout_row="2"
-            android:layout_column="3"
-            android:onClick="numberIn6" />
+                <Button
+                    android:id="@+id/buttonTimes"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@+id/button9"
+                    android:layout_column="3"
 
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="7"
-            android:layout_row="3"
-            android:layout_column="1"
-            android:onClick="numberIn7" />
+                    android:layout_marginLeft="10dp"
 
-        <Button
-            android:id="@+id/button8"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="8"
-            android:layout_row="3"
-            android:layout_column="2"
-            android:onClick="numberIn8" />
+                    android:layout_row="4"
+                    android:layout_toRightOf="@+id/button9"
+                    android:background="@drawable/layout"
+                    android:onClick="inTimes"
+                    android:text="*" />
 
-        <Button
-            android:id="@+id/button9"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="9"
-            android:layout_row="3"
-            android:layout_column="3"
-            android:onClick="numberIn9" />
+                <Button
+                    android:id="@+id/buttonExe"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignLeft="@+id/buttonSwap"
+                    android:layout_below="@+id/buttonSwap"
 
-        <Button
-            android:id="@+id/button0"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="0"
-            android:layout_row="4"
-            android:layout_column="2"
-            android:onClick="numberIn0" />
+                    android:layout_column="4"
 
-        <Button
-            android:id="@+id/buttonPlus"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="+"
-            android:layout_row="1"
-            android:layout_column="4"
-            android:onClick="inPlus" />
+                    android:layout_marginTop="10dp"
+                    android:layout_row="5"
+                    android:background="@drawable/layout"
+                    android:onClick="inExe"
+                    android:text="exe" />
 
-        <Button
-            android:id="@+id/buttonMoins"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="-"
-            android:layout_row="2"
-            android:layout_column="4"
-            android:onClick="inMoins" />
+                <Button
+                    android:id="@+id/buttonSwap"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@+id/buttonTimes"
+                    android:layout_column="4"
 
-        <Button
-            android:id="@+id/buttonTimes"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="*"
-            android:layout_row="3"
-            android:layout_column="4"
-            android:onClick="inTimes" />
+                    android:layout_marginLeft="10dp"
 
-        <Button
-            android:id="@+id/buttonClear"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="clear"
-            android:layout_row="1"
-            android:layout_column="5"
-            android:onClick="inClear" />
+                    android:layout_row="4"
+                    android:layout_toRightOf="@+id/buttonTimes"
+                    android:background="@drawable/layout"
+                    android:onClick="inSwap"
+                    android:text="swap" />
 
-        <Button
-            android:id="@+id/buttoPop"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="pop"
-            android:layout_row="2"
-            android:layout_column="5"
-            android:onClick="inPop" />
+                <Button
+                    android:id="@+id/buttonMoins"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@+id/button6"
+                    android:layout_column="3"
 
-        <Button
-            android:id="@+id/buttonSwap"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="swap"
-            android:layout_row="3"
-            android:layout_column="5"
-            android:onClick="inSwap" />
+                    android:layout_marginLeft="10dp"
 
-        <Button
-            android:id="@+id/buttonExe"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="exe"
-            android:layout_row="4"
-            android:layout_column="5"
-            android:onClick="inExe" />
+                    android:layout_row="3"
+                    android:layout_toRightOf="@+id/button6"
+                    android:background="@drawable/layout"
+                    android:onClick="inMoins"
+                    android:text="-" />
 
-    </GridLayout>
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@+id/button5"
+                    android:layout_column="2"
+
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_row="3"
+                    android:layout_toRightOf="@+id/button5"
+                    android:background="@drawable/layout"
+                    android:onClick="numberIn6"
+                    android:text="6" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@+id/button4"
+                    android:layout_column="1"
+
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_row="3"
+                    android:layout_toRightOf="@+id/button4"
+                    android:background="@drawable/layout"
+                    android:onClick="numberIn5"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignLeft="@+id/button1"
+                    android:layout_below="@+id/button1"
+
+                    android:layout_column="0"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_row="3"
+                    android:background="@drawable/layout"
+                    android:onClick="numberIn4"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/buttoPop"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@+id/buttonMoins"
+                    android:layout_column="4"
+
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_row="3"
+                    android:layout_toRightOf="@+id/buttonMoins"
+                    android:background="@drawable/layout"
+                    android:onClick="inPop"
+                    android:text="pop" />
+
+                <Button
+                    android:id="@+id/buttonClear"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@+id/buttonPlus"
+                    android:layout_column="4"
+
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_row="2"
+                    android:layout_toRightOf="@+id/buttonPlus"
+                    android:background="@drawable/layout"
+                    android:onClick="inClear"
+                    android:text="clear" />
+
+                <Button
+                    android:id="@+id/buttonPlus"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@+id/button3"
+                    android:layout_column="3"
+
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_row="2"
+                    android:layout_toRightOf="@+id/button3"
+                    android:background="@drawable/layout"
+                    android:onClick="inPlus"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@+id/button2"
+                    android:layout_column="2"
+
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_row="2"
+                    android:layout_toRightOf="@+id/button2"
+                    android:background="@drawable/layout"
+                    android:onClick="numberIn3"
+                    android:text="3" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@+id/button1"
+                    android:layout_column="1"
+
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_row="2"
+                    android:layout_toRightOf="@+id/button1"
+                    android:background="@drawable/layout"
+                    android:onClick="numberIn2"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_row="2"
+
+                    android:background="@drawable/layout"
+                    android:onClick="numberIn1"
+                    android:text="1" />
+
+        </GridLayout>
 
 </GridLayout>
