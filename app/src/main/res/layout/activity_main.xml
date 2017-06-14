@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.admin.tp10android.Main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignLeft="@+id/textView"
+    android:useDefaultMargins="false"
+    android:alignmentMode="alignBounds"
+    android:columnCount="1"
+    android:rowCount="3">
+
+    <GridLayout
+        android:background="@color/pileAccent"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <TextView
+            android:id="@+id/graphpile4"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:text="|"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/graphpile3"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:text="|"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/graphpile2"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:text="|"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/graphpile"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:text="|"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/pile4"
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:text="|"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/pile3"
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:text="|"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/pile2"
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:text="|"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/pile"
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:text="|"
+            android:textSize="15dp" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:background="@color/resultAccent"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:id="@+id/graphresult"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_column="0"
+            android:text="|"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="325dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_column="1"
+            android:text="|"
+            android:textSize="15dp" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:background="@color/padAccent"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <Button
+            />
+
+    </GridLayout>
+
+</GridLayout>
