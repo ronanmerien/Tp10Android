@@ -129,7 +129,148 @@
         android:layout_height="300dp">
 
         <Button
-            />
+            android:id="@+id/button1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="1"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:onClick="numberIn1" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="2"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:onClick="numberIn2" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="3"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:onClick="numberIn3" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="4"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:onClick="numberIn4" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="5"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:onClick="numberIn5" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="6"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:onClick="numberIn6" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="7"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:onClick="numberIn7" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="8"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:onClick="numberIn8" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="9"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:onClick="numberIn9" />
+
+        <Button
+            android:id="@+id/buttonplus"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="+"
+            android:layout_row="1"
+            android:layout_column="4"
+            android:onClick="inPlus" />
+
+        <Button
+            android:id="@+id/buttonmoins"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="-"
+            android:layout_row="2"
+            android:layout_column="4"
+            android:onClick="" />
+
+        <Button
+            android:id="@+id/buttontimes"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="*"
+            android:layout_row="3"
+            android:layout_column="4"
+            android:onClick="" />
+
+        <Button
+            android:id="@+id/buttonclear"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="clear"
+            android:layout_row="1"
+            android:layout_column="5"
+            android:onClick="" />
+
+        <Button
+            android:id="@+id/buttopop"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="pop"
+            android:layout_row="2"
+            android:layout_column="5"
+            android:onClick="" />
+
+        <Button
+            android:id="@+id/buttonswap"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="swap"
+            android:layout_row="3"
+            android:layout_column="5"
+            android:onClick="" />
+
+        <Button
+            android:id="@+id/buttonexe"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="exe"
+            android:layout_row="4"
+            android:layout_column="5"
+            android:onClick="" />
 
     </GridLayout>
 
